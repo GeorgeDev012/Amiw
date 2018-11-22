@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>Moje złote myśli</h1>
 <ul>
-  <li *ngFor="let thought of thoughts">{{thought}}</li>
+  <li *ngFor="let thought of thoughts; let i = index">{{thought}} <button (click)="removeThought(i)">Usuń</button></li>
 </ul>
 <input type="text" [value]="text" (input)="text = $event.traget.value">
 <button (click)="addThought()">Dodaj</button>

@@ -14,4 +14,8 @@ export class AppComponent {
     console.log(this.thoughts)
     this.text = ""
   }
+
+  public removeThought(i): void {
+    this.thoughts.splice(i,1)
+  }
 }
