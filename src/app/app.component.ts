@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThoughtsService } from './thoughts.service'
 
 @Component({
   selector: 'app-root',

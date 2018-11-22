@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class ThoughtsService {
 
-  constructor() { }
+  constructor(
+    private thoughtsService: ThoughtsService
+  ) { }
 
   public saveThoughts(thoughts: Array<String>): void {
     localStorage.setItem("thoughtsList", JSON.stringify(thoughts))
