@@ -3,5 +3,5 @@
 <ul>
   <li *ngFor="let thought of thoughts; let i = index">{{thought}} <button (click)="removeThought(i)">Usuń</button></li>
 </ul>
-<input type="text" [value]="text" (input)="text = $event.traget.value">
+<input type="text" [value]="text" (input)="text = $event.target.value">
 <button (click)="addThought()">Dodaj</button>
