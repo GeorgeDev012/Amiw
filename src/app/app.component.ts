@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public text: String = "szczerozłota myśl"
+  public thoughts: Array<String> = []
+  
+  public addThought(): void {
+    this.thoughts.push(this.text)
+    console.log(this.thoughts)
+    this.text = ""
+  }
 }

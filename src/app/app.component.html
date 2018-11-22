@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>Moje złote myśli</h1>
 <ul>{{text}}</ul>
-<input type="text" (input)="text = $event.traget.value">
-<button>Dodaj</button>
+<input type="text" [value]="text" (input)="text = $event.traget.value">
+<button (click)="addThought()">Dodaj</button>
