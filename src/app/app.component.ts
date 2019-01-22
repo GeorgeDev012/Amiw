@@ -9,7 +9,7 @@ import { ThoughtsService } from './thoughts.service';
 
 
 export class AppComponent {
-  public text: String = "szczerozłota myśl"
+  public text: String = "zakupy"
   public thoughts: Array<String> = []
 
   constructor(
