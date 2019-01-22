@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ThoughtsService } from './thoughts.service';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-root',
@@ -10,24 +10,24 @@ import { ThoughtsService } from './thoughts.service';
 
 export class AppComponent {
   public text: String = "zakupy"
-  public thoughts: Array<String> = []
+  public tasks: Array<String> = []
 
   constructor(
-    private thoughtsService: ThoughtsService
+    private tasksService: TasksService
   ) {}
   
-  public addThought(): void {
-    this.thoughts.push(this.text)
+  public addTask(): void {
+    this.tasks.push(this.text)
     this.text = ""
-    this.thoughtsService.saveThoughts(this.thoughts)
+    this.tasksService.saveTasks(this.tasks)
   }
 
-  public removeThought(i): void {
-    this.thoughts.splice(i,1)
-    this.thoughtsService.saveThoughts(this.thoughts)
+  public removeTask(i): void {
+    this.tasks.splice(i,1)
+    this.tasksService.saveTasks(this.tasks)
   }
 
   private ngOnInit() {
-    this.thoughts = this.thoughtsService.fetchThoughts()
+    this.tasks = this.tasksService.fetchTasks()
   }
 }

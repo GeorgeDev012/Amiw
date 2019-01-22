@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>Things to do</h1>
 <ul>
-  <li *ngFor="let thought of thoughts; let i = index">{{thought}} <button (click)="removeThought(i)">Remove</button></li>
+  <li *ngFor="let task of tasks; let i = index">{{task}} <button (click)="removeTask(i)">Remove</button></li>
 </ul>
 <input type="text" [value]="text" (input)="text = $event.target.value">
-<button (click)="addThought()">Add</button>
+<button (click)="addTask()">Add</button>
